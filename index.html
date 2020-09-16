@@ -1,0 +1,549 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>
+	Cane Management System
+</title><meta http-equiv="X-UA-Compatible" content="IE=8" /><meta http-equiv="cache-control" content="no-cache" /><meta http-equiv="expires" content="01 jan 1970 00:00:00 gmt" /><meta http-equiv="pragma" content="no-cache" /><link href="https://fonts.googleapis.com/css?family=Hind&amp;display=swap" rel="stylesheet" />
+    <style type="text/css">
+     .bg-red
+     {
+      background: #f00;
+    color: #fff;
+    padding: 2px;
+ 
+    margin-right: 2px;
+     }
+     .ajax__tab_xp .ajax__tab_tab{font-size:15px !important; background: #6ab36a!important; color:#fff;    border-radius: 5px 5px 0 0; margin-top: 8px!important; border:1px solid gray; border-top:2px solid gray;}
+     .ajax__tab_active .ajax__tab_tab, .ajax__tab_hover .ajax__tab_tab{border-top:2px solid #f3b10b!important;}
+     .ajax__tab_xp .ajax__tab_outer{background:none!important;}
+     .ajax__tab_xp .ajax__tab_inner{background:none !important;}
+     span#lblGrowerCount{
+  }
+  
+  input#BtnFileComplaint 
+  {
+      background-color: Green;
+    border-width: 0px;
+    font-weight: bold;
+    height: 25px;
+    width: 116px!important;
+    font-size: 12px!important;
+}
+        #info
+        {
+            line-height: 35px;
+            float: left;
+            padding: 0px 10px;
+            font-size: 14px;
+        }
+        .captch-img
+        {
+            float: left;
+            text-align: left;
+        }
+        .captch-img img
+        {
+            width: auto;
+            height: 35px;
+        }
+        .bg-color
+        {
+            background-color: #008000;
+            color: #fff;
+            text-align: center;
+            font-size: 20px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        td.grid3
+        {
+            height: 23px;
+        }
+        #tcMasterInfo_tplSupply,  #tcMasterInfo_tplAddnlCalender
+        {
+            height: 300px;
+            overflow: scroll;
+        }
+        div#tcMasterInfo_tplCalender
+        {
+            height: 300px;
+            overflow: scroll;
+        }
+        .e-ganna
+        {
+            font-weight: bold;
+            color: #ffeb04;
+        }
+        .google-store
+        {
+            text-decoration: underline;
+            color: #a5e8f7;
+        }
+        table#grw-info
+        {
+            display: none;
+        }
+        img, div
+        {
+            behavior: url(iepngfix/iepngfix.htc);
+        }
+        .asd
+        {
+            text-align: center;
+        }
+        .padding-right
+        {
+            padding-right: 20px;
+        }
+        .grid1
+        {
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+        .grid1Area
+        {
+            text-align: right;
+            position: relative;
+            z-index: 10;
+            padding: 0px 25px 0px 0px;
+        }
+        .gridL
+        {
+            text-align: left;
+            position: relative;
+            top: expression(this.offsetParent.scrollTop);
+            z-index: 10;
+        }
+        .gridC
+        {
+            text-align: center;
+            position: relative;
+            top: expression(this.offsetParent.scrollTop);
+            z-index: 10;
+        }
+        .grid
+        {
+            text-align: right;
+        }
+        .grid2
+        {
+        }
+        .grid3
+        {
+            text-align: center;
+        }
+        .panel
+        {
+            background: #eee;
+            padding: 10px;
+            width: 100%;
+        }
+        
+        .panel table
+        {
+            width: 100%;
+        }
+        .panel table tbody
+        {
+            margin: 0px;
+            padding: 0px;
+        }
+        .panel table tr th td
+        {
+            border-collapse: collapse;
+            margin: 0px;
+        }
+        
+        .panel table td
+        {
+            padding: 3px;
+        }
+        
+        .panel table th
+        {
+            padding: 3px;
+        }
+        .bold
+        {
+            font-weight: bold;
+        }
+        .HeaderFreez
+        {
+            position: relative;
+            top: expression(document.getElementById("tcMasterInfo_tplSurvey_grdPlot").offsetParent.scrollTop);
+            z-index: 10;
+        }
+        
+        
+        .ajax__tab_xp .ajax__tab_tab
+        {
+            height: 21px !important;
+        }
+        .style1
+        {
+            height: 18px;
+        }
+        input#txtCaptcha
+        {
+            height: 32px;
+            border-radius: 5px;
+            border: 0;
+            border: 1px solid #c3baba;
+        }
+        header
+        {
+            background: #fff;
+            width: 100%;
+            float: left;
+            padding: 5px 0 0 0;
+            border-bottom: 1px solid #e8e8e8;
+            font-family: 'Hind' , sans-serif;
+        }
+        .container-fluid
+        {
+            padding-right: 15px;
+            padding-left: 21px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .logo-right
+        {
+            float: right;
+        }
+        .row
+        {
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+        .col-md-7
+        {
+            width: 58.33333333%;
+            float: left;
+        }
+        .col-md-5
+        {
+            width: 41.66666667%;
+            float: left;
+        }
+        .left-txt
+        {
+            float: left;
+            width: 89%;
+            text-align: right;
+            font-size: 21px;
+            margin-bottom: 0;
+            color: #000;
+        }
+        .left-txt span.toll-free
+        {
+            display: inline-block;
+            text-align: right;
+            color: #f71212;
+            font-weight: bold;
+            font-size: 22px;
+        }
+        .logo
+        {
+            float: left;
+        }
+        
+        .dep-title
+        {
+            color: #2c8402;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 0px;
+            margin-top: 13px;
+            line-height: 25px;
+            font-size: 24px;
+            margin: 13px 0 0 15px;
+            float: left;
+        }
+        .dep-title span
+        {
+            display: block;
+            font-size: 15px;
+            color: #000;
+            font-weight: normal;
+        }
+    div#tcMasterInfo_tplCane, div#tcMasterInfo_tplSMSLog, div#tcMasterInfo_tplLastYrCane {
+    overflow-y: scroll;
+    height: 300px;
+}
+span#lblGrowerCount 
+{
+    margin-left: 156px;
+}
+    </style>
+    <script type="text/javascript" src="iepngfix/iepngfix_tilebg.js"></script>
+   
+    <script language="javascript" type="text/javascript">
+        function CheckBrowser() {
+            var nVer = navigator.appVersion;
+            var nAgt = navigator.userAgent;
+            var browserName = navigator.appName;
+            var fullVersion = '' + parseFloat(navigator.appVersion);
+            var majorVersion = parseInt(navigator.appVersion, 10);
+            var nameOffset, verOffset, ix;
+
+            // In Opera, the true version is after "Opera" or after "Version"
+            if ((verOffset = nAgt.indexOf("Opera")) != -1) {
+                browserName = "Opera";
+                fullVersion = nAgt.substring(verOffset + 6);
+                if ((verOffset = nAgt.indexOf("Version")) != -1)
+                    fullVersion = nAgt.substring(verOffset + 8);
+            }
+            // In MSIE, the true version is after "MSIE" in userAgent
+            else if ((verOffset = nAgt.indexOf("MSIE")) != -1) {
+                browserName = "Microsoft Internet Explorer";
+                fullVersion = nAgt.substring(verOffset + 5);
+            }
+            // In Chrome, the true version is after "Chrome" 
+            else if ((verOffset = nAgt.indexOf("Chrome")) != -1) {
+                browserName = "Chrome";
+                fullVersion = nAgt.substring(verOffset + 7);
+            }
+            // In Safari, the true version is after "Safari" or after "Version" 
+            else if ((verOffset = nAgt.indexOf("Safari")) != -1) {
+                browserName = "Safari";
+                fullVersion = nAgt.substring(verOffset + 7);
+                if ((verOffset = nAgt.indexOf("Version")) != -1)
+                    fullVersion = nAgt.substring(verOffset + 8);
+            }
+            // In Firefox, the true version is after "Firefox" 
+            else if ((verOffset = nAgt.indexOf("Firefox")) != -1) {
+                browserName = "Firefox";
+                fullVersion = nAgt.substring(verOffset + 8);
+            }
+            // In most other browsers, "name/version" is at the end of userAgent 
+            else if ((nameOffset = nAgt.lastIndexOf(' ') + 1) <
+          (verOffset = nAgt.lastIndexOf('/'))) {
+                browserName = nAgt.substring(nameOffset, verOffset);
+                fullVersion = nAgt.substring(verOffset + 1);
+                if (browserName.toLowerCase() == browserName.toUpperCase()) {
+                    browserName = navigator.appName;
+                }
+            }
+
+            // trim the fullVersion string at semicolon/space if present
+            if ((ix = fullVersion.indexOf(";")) != -1)
+                fullVersion = fullVersion.substring(0, ix);
+            if ((ix = fullVersion.indexOf(" ")) != -1)
+                fullVersion = fullVersion.substring(0, ix);
+
+            majorVersion = parseInt('' + fullVersion, 10);
+            if (isNaN(majorVersion)) {
+                fullVersion = '' + parseFloat(navigator.appVersion);
+                majorVersion = parseInt(navigator.appVersion, 10);
+            }
+            //            if (browserName == "Microsoft Internet Explorer" && majorVersion != 8) {
+            //                alert("Your Browser Mode is not Compatible with this application. " + "\n" +
+            //                      "To Proceed, change Browser Mode: Go to Tools -> Click on Developer Tools -> " + "\n" +
+            //                      "Check Brower Mode -> Click on Browser Mode -> Select Internet Explorer 8 ");
+            //                return false;
+            //            }
+            return true;
+        }
+    </script>
+    <link href="user-page-css/style1.css" rel="stylesheet" /><link href="CSS/modal-popup.css" rel="stylesheet" type="text/css" /><link href="/WebResource.axd?d=mX1jSL8PDRz5Q7Ea0tu1eTSjnrupezRZlabX9ccT6vQWS7orXwM7_ZC1DA7f5nbarLYn0cEJVDk44BOLfk66vEK_zupnTZk-iQnn5v_c5lHWTiQiV_rnWNuXn7mA33fjBrAzapOqi9DWRfgWbCYnWg2&amp;t=637002613130000000" type="text/css" rel="stylesheet" /></head>
+<body>
+    <form name="form1" method="post" action="https://enquiry.caneup.in/" id="form1">
+<div>
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="tcMasterInfo_ClientState" id="tcMasterInfo_ClientState" value="{&quot;ActiveTabIndex&quot;:0,&quot;TabState&quot;:[true,true,true,true,true,true,true,true]}" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNDcxOTU3MTM0D2QWAgIDD2QWAgJdD2QWMgIBDxYCHgdWaXNpYmxlaBYCZg9kFgJmD2QWBAIDDw8WAh4EVGV4dGVkZAIFDw8WAh4ISW1hZ2VVcmwFGn4vQ3JlYXRlQ2FwdGNoYS5hc3B4P05ldz0xZGQCAw8WAh8AZxYCZg9kFgRmD2QWDAIFDxAPFgYeDURhdGFUZXh0RmllbGQFCURJU1RfTkFNRR4ORGF0YVZhbHVlRmllbGQFCURJU1RfQ09ERR4LXyFEYXRhQm91bmRnZBAVLg9TZWxlY3QgRGlzdHJpY3QHQWxpZ2FyaA5BbWJlZGthciBOYWdhchJBbXJvaGEgKEogUCBOYWdhcikHQXlvZGh5YQhBemFtZ2FyaAZCYWdwYXQIQmFocmFpY2gFQmFsaWEJQmFscmFtcHVyCUJhcmFiYW5raQhCYXJlaWxseQVCYXN0aQZCaWpub3IGQnVkYXVuDEJ1bGFuZHNoYWhhcgZEZW9yaWEKRmFydWtoYWJhZAdHYXppcHVyCUdoYXppYWJhZAVHb25kYQlHb3Jha2hwdXIFSGFwdXIGSGFyZG9pB0phdW5wdXIGS2FucHVyB0thc2dhbmoKS3VzaGluYWdhcglMYWtoaW1wdXILTWFoYXJhamdhbmoHTWF0aHVyYQNNYXUGTWVlcnV0CU1vcmFkYWJhZA1NdXphZmZhcm5hZ2FyCFBpbGliaGl0CVJhaWJhcmVsaQZSYW1wdXIKU2FoYXJhbnB1cgdTYW1iaGFsDFNoYWhqYWhhbnB1cgZTaGFtbGkOU2lkaGFydGggTmFnYXIHU2l0YXB1cglTdWx0YW5wdXIIVmFyYW5hc2kVLgItMQI0NwI2MgIzMgI2MQI5NQIyMgI3MwI5NwI3MgI2MwI0MQI4MwIzMQI0MgIyNQI5MwI1NwI2NgIyNAI3MQI4MQIyMwI1MwI2NQI1NAI0NQI5MQI1MQI4MgI0NgI5NgIyMQIzNQIxMgI0NAI1NQIzMwIxMQIzNAI0MwIxMwI4NAI1NgI2NAI2NxQrAy5nZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnFgFmZAIHDxBkEBUAFQAUKwMAFgBkAgsPEGQQFQAVABQrAwAWAGQCDQ8PFgIfAWVkZAIPDxBkEBUAFQAUKwMAFgBkAhEPDxYCHwFlZGQCAQ9kFgICAw8PFgIfAQU0PHNwYW4gY2xhc3M9J2JnLXJlZCc+V2Vic2l0ZSBIaXRzIDwvc3Bhbj4gMjMsNDg1LDM0NmRkAgUPDxYCHwFlZGQCBw8PFgIfAWVkZAILDw8WAh8BBTI8c3BhbiBjbGFzcz0nYmctcmVkJz5Hcm93ZXIgSGl0czwvc3Bhbj4gNzksNDEzLDUwMGRkAg0PDxYCHwFlZGQCDw8PFgIfAWVkZAIRDw8WAh8BZWRkAhMPDxYCHwFlZGQCFQ8PFgIfAWVkZAIXDw8WAh8BZWRkAhkPDxYCHwFlZGQCGw8PFgIfAWVkZAIdDw8WAh8BZWRkAh8PDxYCHwFlZGQCIQ8PFgIfAWVkZAIjDxYCHwBoZAIlDw8WAh8BZWRkAicPDxYCHwFlZGQCKQ8PFgIfAWVkZAIrDw8WAh8BZWRkAi0PDxYCHwFlZGQCLw8PFgIfAWVkZAIxDw8WAh8BZWRkAjMPZBYQZg9kFgJmD2QWBgIDD2QWAgIBDzwrABEDAA8WBh8FZx4LXyFJdGVtQ291bnRmHwBoZAEQFgAWABYADBQrAABkAgUPZBYCAgEPDxYCHwBoZGQCBw88KwARAgAPFgYfBWcfBmYfAGhkDBQrAABkAgEPZBYCZg9kFgQCAQ9kFgICAQ8PFgIfAGhkZAIDDzwrABECAA8WBh8FZx8GZh8AaGQMFCsAAGQCAg9kFgJmD2QWCAICDw8WAh8BZWRkAgUPDxYCHwFlZGQCCQ8PFgIfAWVkZAIPDzwrABEDAA8WBh8FZx8GZh8AaGQBEBYAFgAWAAwUKwAAZAIDD2QWAmYPZBYIAgIPDxYCHwFlZGQCBQ8PFgIfAWVkZAIJDw8WAh8BZWRkAg8PPCsAEQMADxYGHwVnHwZmHwBoZAEQFgAWABYADBQrAABkAgQPZBYCZg9kFgICAQ88KwARAwAPFgYfBWcfBmYfAGhkARAWABYAFgAMFCsAAGQCBQ9kFgJmD2QWAgIBDzwrABEDAA8WBh8FZx8GZh8AaGQBEBYAFgAWAAwUKwAAZAIGD2QWAmYPZBYCAgEPPCsAEQIBEBYAFgAWAAwUKwAAZAIHD2QWAmYPZBYEAgMPPCsAEQMADxYGHwVnHwZmHwBoZAEQFgAWABYADBQrAABkAgcPDxYCHwEFATBkZBgLBRx0Y01hc3RlckluZm8kdHBsQ2FuZSRncmRDYW5lDzwrAAwBCGZkBSR0Y01hc3RlckluZm8kdHBsU3VydmV5JGdyZFN1cnZleVBsb3QPPCsADAEIZmQFIHRjTWFzdGVySW5mbyR0cGxTdXBwbHkkZ3JkU3VwcGx5DzwrAAwBCGZkBSV0Y01hc3RlckluZm8kdHBsUHJlQ2FsZW5kZXIkZ3JkU3VydmV5DzwrAAwBCGZkBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAgUHQ2hrQ29kZQUMdGNNYXN0ZXJJbmZvBSN0Y01hc3RlckluZm8kdHBsU01TTG9nJEdWU01TRGV0YWlscw88KwAMAQhmZAUsdGNNYXN0ZXJJbmZvJHRwbExhc3RZckNhbmUkR3JkU3VwcGx5TGFzdFllYXIPZ2QFLnRjTWFzdGVySW5mbyR0cGxBZGRubENhbGVuZGVyJGdyZEFkZG5sQ2FsZW5kZXIPPCsADAEIZmQFJHRjTWFzdGVySW5mbyR0cGxDYWxlbmRlciRncmRDYWxlbmRlcg88KwAMAQhmZAUMdGNNYXN0ZXJJbmZvDw9kZmQFHnRjTWFzdGVySW5mbyR0cGxTdXJ2ZXkkZ3JkUGxvdA88KwAMAQhmZPMKZ6hm+ou9BEaWM4vxgN0wjVnpuFaTmFZm6VTZKTXT" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=b65KkCWTrgJ9HcloQ-fP1AcUPXU7u6k-wH264tP_xZyf8YHRJIhYPVAW7OhcDny38r0tzVZdKv2XVTC2EuwRHl3--J_eoUMio58V3EH1-oI1&amp;t=637101059640000000" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=dQA-y85zB1lMQ8MKFb6Q8AZ2fPElfjepGPOhLrhHEd0eXOj-qeylQEOUW6MU4kcidXVI8sokuv7zlfbkqXNkio-rxRCMhiW7bBhrMjtZCmrDKb6ql4NER3JXzSmIJP3D0&amp;t=734d43f5" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=ISxy-cD-StMco5kLwd7UlUfZpjExfSRIa3tZs4IYzgnefq43xBHDbMQE_D_InbybsCj20DuIgLX-Hygj0eziu51hvUb2mo8dWHqKe00svdwU5ajlZexNDYPzarIYp4-ewEuwK-fWQxMcu9kDWF-pVg2&amp;t=734d43f5" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=ajSqcHDIYy8WuGbup5qxfFus32zEBBpNhP8yCCbvQWHc5loj8Ez_W0WB8-Lduc4TzYuBpkusXWJHm-vmBlX7G5zpU77yEVNh47bn6xY4KS2vzWtIh-My2hjxfYElUOs40&amp;t=734d43f5" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=f7M0A_H5UZrLYo11a1w1bXtZphmuKoo2S8yNpU4wlMd6RsGphLn4TmpFvhrzRABocfabx5BUESDwJqtV6iuLXGS9bQWL1_w-IFbWGjpKuXYCge0t4px4VNBT3cSXPcb1vqtjhE-O8dVwAuaYZNayZw2&amp;t=734d43f5" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=99dwRDnzX-AwByxK62v4zgdBDT5TL-gOCyzSKvkuPf5H8KSA8bmUBN1lG1IBb525a5ixI_HzEdWOcCDaQpBpuzTkcwiocuvntS3MXfE3i7eGgongUq__bCh02KbN62U90&amp;t=734d43f5" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=uqSB3IhdnjUKlNJdbrZm93Nj1nxRy0VxKdBRdNOoIE91bZxWk2X9-LpTyx3xDwhaBMepKPKai3qkyjym9RmIyB5wTdKvt1Dhl4vTTod2BcRGsXSuFC_XPOIkgqLzwc6BYxoPzH0oH5mZxqEsdCqgMDgn9b1wUe5f0XzW1J4nvH81&amp;t=734d43f5" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6AEE4071" />
+</div>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', [], [], [], 90, '');
+//]]>
+</script>
+
+    <input type="hidden" name="HiddenField1" id="HiddenField1" value="0" />
+    <input type="hidden" name="HiddenField2" id="HiddenField2" value="0" />
+    <input type="hidden" name="HiddenField3" id="HiddenField3" />
+    <input type="hidden" name="HiddenField4" id="HiddenField4" />
+    <input type="hidden" name="HiddenField5" id="HiddenField5" />
+    <input type="hidden" name="HiddenField6" id="HiddenField6" />
+    <input type="hidden" name="HiddenField7" id="HiddenField7" />
+    <input type="hidden" name="HiddenField8" id="HiddenField8" />
+    <input type="hidden" name="HiddenField9" id="HiddenField9" />
+    <input type="hidden" name="HiddenField10" id="HiddenField10" />
+    <input type="hidden" name="HdFactory" id="HdFactory" />
+    <input type="hidden" name="HdVillCode" id="HdVillCode" value="0" />
+    <input type="hidden" name="HdSocCode" id="HdSocCode" value="0" />
+    <input type="hidden" name="HdGrowCode" id="HdGrowCode" value="0" />
+    <input type="hidden" name="HdModeWt" id="HdModeWt" value="0" />
+    <input type="hidden" name="HdBQuota" id="HdBQuota" value="0" />
+    <input type="hidden" name="HdAddlBonding" id="HdAddlBonding" value="0" />
+    <input type="hidden" name="HdGeneIncre" id="HdGeneIncre" value="0" />
+    <input type="hidden" name="HdGrowName" id="HdGrowName" />
+    <input type="hidden" name="HdTotalBonding" id="HdTotalBonding" value="0" />
+    <input type="hidden" name="HdnMobNo" id="HdnMobNo" />
+    
+    
+        <div id="header">
+            
+            <center>
+                <div style="border: 1px solid blue; float: left; width: 100%; box-sizing: border-box;
+                    margin-top: 1px; padding-top: 2px; padding-bottom: 2px;">
+                    
+                    <table id="grwdetail" cellpadding="0" cellspacing="0" width="100%" style="color: Black; border: 1px; font-size: 12px;">
+	<tr>
+		<td align="left" width="75%">
+                                UGC:&nbsp;<input name="TxtUGC" type="text" maxlength="20" id="TxtUGC" style="width:82px;" />&nbsp;
+                                <input type="submit" name="BtnView" value="View" id="BtnView" tabindex="1" class="closeButton" style="background-color:Green;border-width:0px;height:20px;width:70px;" />&nbsp;Or&nbsp; District:&nbsp;<select name="DdlDistrict" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;DdlDistrict\&#39;,\&#39;\&#39;)&#39;, 0)" id="DdlDistrict" tabindex="2" style="width:100px;">
+			<option selected="selected" value="-1">Select District</option>
+			<option value="47">Aligarh</option>
+			<option value="62">Ambedkar Nagar</option>
+			<option value="32">Amroha (J P Nagar)</option>
+			<option value="61">Ayodhya</option>
+			<option value="95">Azamgarh</option>
+			<option value="22">Bagpat</option>
+			<option value="73">Bahraich</option>
+			<option value="97">Balia</option>
+			<option value="72">Balrampur</option>
+			<option value="63">Barabanki</option>
+			<option value="41">Bareilly</option>
+			<option value="83">Basti</option>
+			<option value="31">Bijnor</option>
+			<option value="42">Budaun</option>
+			<option value="25">Bulandshahar</option>
+			<option value="93">Deoria</option>
+			<option value="57">Farukhabad</option>
+			<option value="66">Gazipur</option>
+			<option value="24">Ghaziabad</option>
+			<option value="71">Gonda</option>
+			<option value="81">Gorakhpur</option>
+			<option value="23">Hapur</option>
+			<option value="53">Hardoi</option>
+			<option value="65">Jaunpur</option>
+			<option value="54">Kanpur</option>
+			<option value="45">Kasganj</option>
+			<option value="91">Kushinagar</option>
+			<option value="51">Lakhimpur</option>
+			<option value="82">Maharajganj</option>
+			<option value="46">Mathura</option>
+			<option value="96">Mau</option>
+			<option value="21">Meerut</option>
+			<option value="35">Moradabad</option>
+			<option value="12">Muzaffarnagar</option>
+			<option value="44">Pilibhit</option>
+			<option value="55">Raibareli</option>
+			<option value="33">Rampur</option>
+			<option value="11">Saharanpur</option>
+			<option value="34">Sambhal</option>
+			<option value="43">Shahjahanpur</option>
+			<option value="13">Shamli</option>
+			<option value="84">Sidharth Nagar</option>
+			<option value="56">Sitapur</option>
+			<option value="64">Sultanpur</option>
+			<option value="67">Varanasi</option>
+
+		</select>
+                                
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TabPanel, {"headerTab":$get("__tab_tcMasterInfo_tplSurvey"),"ownerID":"tcMasterInfo"}, null, {"owner":"tcMasterInfo"}, $get("tcMasterInfo_tplSurvey"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TabPanel, {"headerTab":$get("__tab_tcMasterInfo_tplPreCalender"),"ownerID":"tcMasterInfo"}, null, {"owner":"tcMasterInfo"}, $get("tcMasterInfo_tplPreCalender"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TabPanel, {"headerTab":$get("__tab_tcMasterInfo_tplCalender"),"ownerID":"tcMasterInfo"}, null, {"owner":"tcMasterInfo"}, $get("tcMasterInfo_tplCalender"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TabPanel, {"headerTab":$get("__tab_tcMasterInfo_tplAddnlCalender"),"ownerID":"tcMasterInfo"}, null, {"owner":"tcMasterInfo"}, $get("tcMasterInfo_tplAddnlCalender"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TabPanel, {"headerTab":$get("__tab_tcMasterInfo_tplSupply"),"ownerID":"tcMasterInfo"}, null, {"owner":"tcMasterInfo"}, $get("tcMasterInfo_tplSupply"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TabPanel, {"headerTab":$get("__tab_tcMasterInfo_tplCane"),"ownerID":"tcMasterInfo"}, null, {"owner":"tcMasterInfo"}, $get("tcMasterInfo_tplCane"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TabPanel, {"headerTab":$get("__tab_tcMasterInfo_tplLastYrCane"),"ownerID":"tcMasterInfo"}, null, {"owner":"tcMasterInfo"}, $get("tcMasterInfo_tplLastYrCane"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TabPanel, {"headerTab":$get("__tab_tcMasterInfo_tplSMSLog"),"ownerID":"tcMasterInfo"}, null, {"owner":"tcMasterInfo"}, $get("tcMasterInfo_tplSMSLog"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TabContainer, {"activeTabIndex":0,"clientStateField":$get("tcMasterInfo_ClientState")}, null, null, $get("tcMasterInfo"));
+});
+//]]>
+</script>
+</form>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
